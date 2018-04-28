@@ -1,0 +1,23 @@
+﻿@model ProfileWebsite.
+@{ 
+    ViewBag.Title = "Basic";
+}
+
+<h2>Hello, <span data-bind="text:getName()"></span></h2>
+
+@section Scripts {
+    <script>
+        function ViewModel(firstName, lastName) {
+            var self = this;
+
+            self.firstName + ' ' + self.lastName;
+            self.getName = function () {
+                return self.name
+            }
+        }
+
+
+        ko.applyBindings(viewModel);
+    </script>
+    }
+
